@@ -1,0 +1,12 @@
+Description: fix pytest compat
+Author: Dimitri John Ledkov <xnox@ubuntu.com>
+
+
+--- python-characteristic-14.3.0.orig/setup.cfg
++++ python-characteristic-14.3.0/setup.cfg
+@@ -1,4 +1,4 @@
+-[pytest]
++[tool:pytest]
+ minversion = 2.6
+ strict = true
+ norecursedirs = .* build dist test_data *.egg
