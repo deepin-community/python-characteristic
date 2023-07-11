@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+# we want to run the pytest test suite, but we do not want it running
+# from the main working directory (we want it to look for the
+# installed package)
+
+for py3vers in $(py3versions -s); do
+    echo "Testing with $py3vers:"
+    $py3vers -m pytest
+done
